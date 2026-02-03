@@ -144,17 +144,100 @@ else:
 
 if page == "🏠 Accueil":
     st.title("🛒 SmartMarket — Analyse Marketing Multi-Canaux")
+
     st.markdown(
         """
-SmartMarket analyse la performance de ses campagnes sur **septembre 2025**.
+SmartMarket analyse la performance de ses campagnes marketing sur **septembre 2025** afin d’aider la direction à **prioriser les canaux** et **optimiser le budget**.
 
-Objectifs :
-- mesurer la performance marketing (CTR, CVR, CPL),
-- mesurer la performance business via le CRM (MQL → SQL → Client),
-- identifier les segments (région, secteur, taille) les plus rentables,
-- recommander des actions d’optimisation.
+Cette application propose :
+- une **sélection des données** (périmètre + variables retenues),
+- une **analyse univariée et bivariée**,
+- des **visualisations métier**,
+- un **dashboard** synthétique (KPI),
+- une **note d’analyse métier** et un **carnet technique**.
         """
     )
+
+    st.divider()
+
+    st.subheader("Objectifs métier")
+    st.markdown(
+        """
+- Mesurer la performance marketing (**CTR**, **CVR**, **CPL**).
+- Mesurer la performance business via le CRM (**MQL → SQL → Client**).
+- Identifier les segments les plus rentables (**région**, **secteur**, **taille d’entreprise**).
+- Proposer des recommandations opérationnelles d’optimisation.
+        """
+    )
+
+    st.divider()
+
+    st.subheader("Périmètre & sources de données")
+    c1, c2 = st.columns(2)
+
+    with c1:
+        st.markdown(
+            """
+**Périmètre**
+- Période analysée : **01/09/2025 → 30/09/2025**
+- Unités analysées : **leads** (CRM) + **campagnes** (media)
+            """
+        )
+
+    with c2:
+        st.markdown(
+            """
+**Sources**
+- `leads_smartmarket.csv` : date, canal, device  
+- `campaign_smartmarket.json` : coût, impressions, clics, conversions  
+- `crm_smartmarket.xlsx` : secteur, région, taille, statut (MQL/SQL/Client)
+            """
+        )
+
+    st.divider()
+
+    st.subheader("Définitions des KPI")
+    st.markdown(
+        """
+- **CTR** = clics / impressions → efficacité publicitaire (capacité à générer du trafic).  
+- **CVR** = conversions / clics → efficacité post-clic (capacité à convertir).  
+- **CPL** = coût / leads → coût d’acquisition d’un lead.  
+- **Taux client (CRM)** = clients / leads → qualité business finale.
+
+⚠️ Les **conversions campagnes** ne sont pas forcément des **clients CRM** : l’application affiche ces indicateurs séparément.
+        """
+    )
+
+    st.divider()
+
+    st.subheader("📊 Aperçu rapide des données (périmètre)")
+    leads_period = filter_perimeter(leads_raw)
+    mart_period = build_mart(leads_period.drop_duplicates("lead_id"), campaigns_raw, crm_raw)
+
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Leads (sept. 2025)", fmt_int(len(leads_period)))
+    k2.metric("Canaux", fmt_int(mart_period["channel"].nunique()))
+    k3.metric("Régions", fmt_int(mart_period["region"].nunique()))
+    k4.metric("Secteurs", fmt_int(mart_period["sector"].nunique()))
+
+    st.divider()
+
+    st.subheader("Comment utiliser l’application")
+    st.markdown(
+        """
+1. Va dans **Sélection des données** pour vérifier le périmètre et les variables retenues.  
+2. Consulte **Analyse** pour les tableaux uni/bivariés et leurs interprétations.  
+3. Consulte **Visualisations** pour répondre aux questions métier clés.  
+4. Utilise **Dashboard** pour une lecture rapide (KPI + graphs) et exporter les résultats si nécessaire.  
+        """
+    )
+
+    st.info(
+        "Les filtres (Canaux / Régions) s’appliquent sur les pages Analyse, Visualisations, Dashboard. "
+        "Ils ne s’appliquent pas à l’Accueil, la Note métier, ni au Carnet technique."
+    )
+
+    
 
 elif page == "✅ Sélection des données":
     st.title("✅ Sélection des données")
@@ -439,6 +522,7 @@ elif page == "🛠️ Carnet technique":
 - Justification : éviter une décision budgétaire erronée.
         """
     )
+
 
 st.markdown("---")
 st.caption("Projet SmartMarket – Analyse marketing – Périmètre : Septembre 2025")
