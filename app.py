@@ -111,16 +111,30 @@ page = st.sidebar.radio(
 
 if page not in ["🏠 Accueil", "📝 Note d’analyse métier", "🛠️ Carnet technique"]:
     st.subheader("Filtres")
-    f1, f2 = st.columns(2)
-    with f1:
+    c1, c2, c3 = st.columns([3, 3, 1])
+
+    with c1:
         selected_channels = st.multiselect("Canaux", options=ALL_CHANNELS)
-    with f2:
+    with c2:
         selected_regions = st.multiselect("Régions", options=ALL_REGIONS)
+    with c3:
+        st.write("")
+        st.write("")
+        reset = st.button("Réinitialiser")
+
+    if reset:
+        selected_channels = []
+        selected_regions = []
 
     channels_to_use = selected_channels if selected_channels else ALL_CHANNELS
     regions_to_use = selected_regions if selected_regions else ALL_REGIONS
 
     mart_f = mart[(mart["channel"].isin(channels_to_use)) & (mart["region"].isin(regions_to_use))].copy()
+
+    st.caption(
+        "CTR = clics / impressions · CVR = conversions / clics · CPL = coût / leads · "
+        "Taux client = clients CRM / leads"
+    )
     st.divider()
 else:
     channels_to_use = ALL_CHANNELS
@@ -135,7 +149,7 @@ if page == "🏠 Accueil":
 SmartMarket analyse la performance de ses campagnes sur **septembre 2025**.
 
 Objectifs :
-- mesurer la performance marketing (CTR, conversions),
+- mesurer la performance marketing (CTR, CVR, CPL),
 - mesurer la performance business via le CRM (MQL → SQL → Client),
 - identifier les segments (région, secteur, taille) les plus rentables,
 - recommander des actions d’optimisation.
@@ -160,15 +174,23 @@ Variables conservées :
 - CRM : `company_size`, `sector`, `region`, `status`
 
 Justification :
+- `date` applique le périmètre (septembre 2025).
 - `channel` permet de comparer la performance par canal.
 - `region/sector/company_size` permettent la segmentation.
-- `status` permet de mesurer la qualité business du lead.
+- `status` mesure la qualité business (MQL/SQL/Client).
 - Toute donnée identifiante est exclue.
         """
     )
 
     with st.expander("Aperçu des données filtrées"):
         st.dataframe(mart_f.head(50), use_container_width=True)
+
+    st.download_button(
+        "📥 Exporter les données filtrées (CSV)",
+        mart_f.to_csv(index=False).encode("utf-8"),
+        "smartmarket_donnees_filtrees.csv",
+        "text/csv",
+    )
 
 elif page == "📈 Analyse":
     st.title("📈 Analyse univariée & bivariée")
@@ -216,13 +238,12 @@ elif page == "📈 Analyse":
     sec["taux_client_%"] = sec["is_client"] * 100
     st.dataframe(sec.sort_values("taux_client_%", ascending=False)[["sector", "taux_client_%"]].round(1))
 
-    st.divider()
-    st.subheader("Interprétation")
-    st.markdown(
+    st.info(
         """
-- Le croisement **Canal × Statut** sépare les canaux orientés volume (MQL) des canaux orientés qualité (SQL/Client).
-- Les taux client par **région** et **secteur** identifient les segments où la conversion finale est plus élevée.
-- Les statistiques descriptives des campagnes permettent de comparer les niveaux de coûts et d’identifier des extrêmes.
+**Interprétation métier**
+- Le croisement Canal × Statut distingue les canaux orientés volume (MQL) des canaux orientés qualité (SQL/Client).
+- Les segments (région, secteur) avec un taux client supérieur à la moyenne sont prioritaires pour le ciblage.
+- Les statistiques de campagnes aident à détecter des extrêmes de coûts ou de performance.
         """
     )
 
@@ -270,13 +291,12 @@ elif page == "📊 Visualisations":
         use_container_width=True,
     )
 
-    st.divider()
-    st.subheader("Interprétation")
-    st.markdown(
+    st.info(
         """
-- Un canal peut être performant en CTR mais faible en conversion : cela indique souvent une optimisation à faire sur le ciblage ou la landing.
-- Le CPL doit être analysé avec la qualité CRM : un CPL élevé est acceptable si le taux client est très bon.
-- L’analyse régionale permet de cibler des zones géographiques plus rentables.
+**Interprétation**
+- CTR élevé sans conversion : améliorer le ciblage, le message ou la landing.
+- CPL élevé peut être acceptable si la qualité CRM (taux client) est élevée.
+- L’analyse régionale aide à concentrer le budget sur les zones les plus rentables.
         """
     )
 
@@ -326,14 +346,27 @@ elif page == "📌 Dashboard":
         use_container_width=True,
     )
 
-    st.divider()
-    st.subheader("Lecture rapide pour décision")
-    st.markdown(
+    st.info(
         """
-- Investir prioritairement sur les canaux avec **taux client élevé** et **CPL raisonnable**.
-- Sur un canal à CTR élevé mais CVR faible : améliorer ciblage, message ou landing.
-- Concentrer les efforts sur les régions et secteurs dont le taux client est supérieur à la moyenne.
+**Lecture rapide**
+- Prioriser les canaux avec **taux client élevé** et **CPL raisonnable**.
+- CTR élevé + CVR faible : travailler la landing, le ciblage ou la proposition de valeur.
+- Les segments régionaux/sectoriels performants méritent des campagnes dédiées.
         """
+    )
+
+    kpi_export = pd.DataFrame(
+        {
+            "kpi": ["leads", "cout_total", "ctr", "cvr", "cpl", "taux_client"],
+            "value": [total_leads, total_cost, ctr, cvr, cpl, client_rate],
+        }
+    )
+
+    st.download_button(
+        "📥 Exporter les KPI (CSV)",
+        kpi_export.to_csv(index=False).encode("utf-8"),
+        "smartmarket_kpi.csv",
+        "text/csv",
     )
 
 elif page == "📝 Note d’analyse métier":
@@ -342,34 +375,31 @@ elif page == "📝 Note d’analyse métier":
     st.markdown(
         """
 ### Contexte et objectifs
-SmartMarket a déployé plusieurs campagnes marketing au cours de septembre 2025 pour générer des leads.
-L’objectif est de mesurer la performance des canaux d’acquisition et d’identifier les segments les plus rentables afin d’optimiser le budget.
+SmartMarket a déployé plusieurs campagnes marketing au cours de septembre 2025 afin de générer des leads.
+L’objectif est de comparer les canaux d’acquisition et d’identifier les segments les plus rentables pour optimiser le budget.
 
 ### Données et périmètre
 Trois sources ont été exploitées : leads, campagnes et CRM.
-Le périmètre est limité à septembre 2025. Les doublons de lead_id sont supprimés pour éviter de fausser les volumes et KPI.
+Le périmètre est limité à septembre 2025. Les doublons sur lead_id sont supprimés pour éviter de fausser les indicateurs.
 
 ### Résultats clés
-Les canaux ne présentent pas les mêmes profils de performance :
-- certains canaux apportent davantage de volume,
-- d’autres apportent moins de leads mais une meilleure conversion finale en clients.
+Les canaux présentent des profils de performance différents : certains génèrent surtout du volume, d’autres moins de leads mais une meilleure conversion finale en clients.
+Les KPI marketing (CTR, CVR) mesurent l’efficacité média, mais la performance business se mesure via le CRM (taux de clients).
 
-Les KPI marketing (CTR et CVR) expliquent l’efficacité média, mais le CRM permet d’évaluer la qualité business avec la part de clients.
-
-L’analyse de segmentation (région, secteur, taille) met en évidence des zones et profils où la conversion en client est supérieure à la moyenne, ce qui constitue des opportunités de ciblage.
+La segmentation (région, secteur, taille) met en évidence des zones où la conversion en clients est supérieure à la moyenne, ce qui indique des opportunités de ciblage.
 
 ### Interprétation métier
-Un canal doit être jugé par son équilibre coût / qualité :
-- un CPL bas est intéressant uniquement si la qualité suit,
-- un canal coûteux peut rester rentable s’il génère proportionnellement plus de clients.
+Un canal doit être évalué selon le couple coût/qualité :
+- CPL faible est intéressant si la qualité CRM suit,
+- un canal plus coûteux peut être rentable s’il génère proportionnellement plus de clients.
 
-Un CTR élevé sans conversion suggère un défaut d’alignement entre la promesse publicitaire et le parcours de conversion (ciblage, offre, landing page).
+CTR élevé sans conversion suggère un défaut d’alignement entre la promesse publicitaire et le parcours (landing, offre, ciblage).
 
 ### Recommandations
-1. Réallouer le budget vers les canaux à taux client élevé et CPL acceptable.
-2. Optimiser les canaux à CTR correct mais CVR faible : tests A/B sur landing, ciblage et message.
-3. Renforcer les campagnes sur les régions et secteurs les plus convertisseurs.
-4. Mieux aligner marketing et ventes : distinguer conversion marketing et client CRM, suivre le funnel MQL → SQL → Client.
+1. Réallouer le budget vers les canaux au meilleur équilibre CPL / taux client.
+2. Optimiser les canaux à CTR correct mais CVR faible (tests A/B landing, message, ciblage).
+3. Renforcer les campagnes sur les segments (régions/secteurs) les plus convertisseurs.
+4. Aligner marketing et ventes : distinguer conversions marketing et clients CRM, suivre MQL → SQL → Client.
         """
     )
 
@@ -400,12 +430,15 @@ elif page == "🛠️ Carnet technique":
 
 **5) Divisions par zéro**
 - Problème : CTR/CVR peuvent être infinis si impressions ou clics = 0.
-- Solution : fonction `safe_rate()` et contrôle des dénominateurs.
-- Justification : stabilité du calcul et meilleure lisibilité.
+- Solution : fonction safe_rate() et contrôles des dénominateurs.
+- Justification : stabilité des calculs et indicateurs interprétables.
 
 **6) Conversion marketing vs client CRM**
 - Problème : risque de confondre conversions de campagnes et clients finaux.
-- Solution : affichage séparé et note explicative dans le dashboard.
+- Solution : affichage séparé + note explicative dans le dashboard.
 - Justification : éviter une décision budgétaire erronée.
         """
     )
+
+st.markdown("---")
+st.caption("Projet SmartMarket – Analyse marketing – Périmètre : Septembre 2025")
