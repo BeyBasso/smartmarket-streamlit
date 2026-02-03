@@ -1,0 +1,37 @@
+[
+  {
+    "channel": "Emailing",
+    "impressions": 116154,
+    "clicks": 7029,
+    "conversions": 690,
+    "cost": 1179.24
+  },
+  {
+    "channel": "Facebook Ads",
+    "impressions": 293049,
+    "clicks": 7621,
+    "conversions": 340,
+    "cost": 7753.48
+  },
+  {
+    "channel": "Instagram Ads",
+    "impressions": 588284,
+    "clicks": 16046,
+    "conversions": 1233,
+    "cost": 12507.69
+  },
+  {
+    "channel": "LinkedIn Ads",
+    "impressions": 455265,
+    "clicks": 7683,
+    "conversions": 510,
+    "cost": 31440.69
+  },
+  {
+    "channel": "CRM",
+    "impressions": 81907,
+    "clicks": 2063,
+    "conversions": 506,
+    "cost": 162.25
+  }
+]

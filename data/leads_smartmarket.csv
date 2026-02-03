@@ -1,0 +1,301 @@
+lead_id,date,channel,device
+L100000,2025-09-03,LinkedIn Ads,Mobile
+L100001,2025-09-23,CRM,Desktop
+L100002,2025-09-19,Emailing,Desktop
+L100003,2025-09-13,Instagram Ads,Mobile
+L100004,2025-09-13,Emailing,Mobile
+L100005,2025-09-25,LinkedIn Ads,Mobile
+L100006,2025-09-03,Facebook Ads,Tablet
+L100007,2025-09-21,LinkedIn Ads,Mobile
+L100008,2025-09-06,LinkedIn Ads,Desktop
+L100009,2025-09-03,LinkedIn Ads,Desktop
+L100010,2025-09-16,Emailing,Mobile
+L100011,2025-09-29,CRM,Mobile
+L100012,2025-09-22,Facebook Ads,Tablet
+L100013,2025-09-23,Emailing,Mobile
+L100014,2025-09-21,Instagram Ads,Mobile
+L100015,2025-09-23,Facebook Ads,Desktop
+L100016,2025-09-15,LinkedIn Ads,Desktop
+L100017,2025-09-04,LinkedIn Ads,Tablet
+L100018,2025-09-25,Facebook Ads,Mobile
+L100019,2025-09-14,CRM,Mobile
+L100020,2025-09-15,Facebook Ads,Mobile
+L100021,2025-09-11,Instagram Ads,Mobile
+L100022,2025-09-06,Facebook Ads,Mobile
+L100023,2025-09-27,CRM,Mobile
+L100024,2025-09-23,Emailing,Mobile
+L100025,2025-09-19,Emailing,Mobile
+L100026,2025-09-12,Facebook Ads,Mobile
+L100027,2025-09-24,CRM,Mobile
+L100028,2025-09-16,CRM,Desktop
+L100029,2025-09-13,LinkedIn Ads,Mobile
+L100030,2025-09-14,CRM,Mobile
+L100031,2025-09-07,CRM,Mobile
+L100032,2025-09-03,Instagram Ads,Mobile
+L100033,2025-09-17,Facebook Ads,Mobile
+L100034,2025-09-26,LinkedIn Ads,Mobile
+L100035,2025-09-02,LinkedIn Ads,Mobile
+L100036,2025-09-25,Facebook Ads,Mobile
+L100037,2025-09-25,Emailing,Mobile
+L100038,2025-09-09,LinkedIn Ads,Mobile
+L100039,2025-09-19,Facebook Ads,Mobile
+L100040,2025-09-05,CRM,Desktop
+L100041,2025-09-22,Facebook Ads,Desktop
+L100042,2025-09-21,Emailing,Desktop
+L100043,2025-09-11,LinkedIn Ads,Mobile
+L100044,2025-09-02,Emailing,Desktop
+L100045,2025-09-29,Emailing,Mobile
+L100046,2025-09-13,Instagram Ads,Mobile
+L100047,2025-09-26,CRM,Desktop
+L100048,2025-09-20,Emailing,Mobile
+L100049,2025-09-23,Facebook Ads,Mobile
+L100050,2025-09-23,LinkedIn Ads,Desktop
+L100051,2025-09-06,CRM,Desktop
+L100052,2025-09-11,Instagram Ads,Tablet
+L100053,2025-09-14,Emailing,Mobile
+L100054,2025-09-15,Emailing,Mobile
+L100055,2025-09-02,Facebook Ads,Desktop
+L100056,2025-09-16,Emailing,Mobile
+L100057,2025-09-05,LinkedIn Ads,Desktop
+L100058,2025-09-22,Emailing,Mobile
+L100059,2025-09-20,Instagram Ads,Mobile
+L100060,2025-09-27,LinkedIn Ads,Mobile
+L100061,2025-09-22,Instagram Ads,Desktop
+L100062,2025-09-11,Emailing,Mobile
+L100063,2025-09-29,LinkedIn Ads,Mobile
+L100064,2025-09-12,LinkedIn Ads,Mobile
+L100065,2025-09-10,LinkedIn Ads,Mobile
+L100066,2025-09-27,Emailing,Mobile
+L100067,2025-09-11,Emailing,Desktop
+L100068,2025-09-03,CRM,Mobile
+L100069,2025-09-14,Facebook Ads,Desktop
+L100070,2025-09-24,Facebook Ads,Desktop
+L100071,2025-09-06,Instagram Ads,Mobile
+L100072,2025-09-14,LinkedIn Ads,Mobile
+L100073,2025-09-04,CRM,Mobile
+L100074,2025-09-20,Facebook Ads,Mobile
+L100075,2025-09-14,CRM,Mobile
+L100076,2025-09-10,Emailing,Tablet
+L100077,2025-09-07,Instagram Ads,Tablet
+L100078,2025-09-17,Instagram Ads,Desktop
+L100079,2025-09-20,Emailing,Mobile
+L100080,2025-09-28,Emailing,Desktop
+L100081,2025-09-13,Facebook Ads,Desktop
+L100082,2025-09-05,CRM,Mobile
+L100083,2025-09-25,Instagram Ads,Desktop
+L100084,2025-09-19,CRM,Mobile
+L100085,2025-09-21,LinkedIn Ads,Mobile
+L100086,2025-09-03,Facebook Ads,Mobile
+L100087,2025-09-10,LinkedIn Ads,Mobile
+L100088,2025-09-23,Emailing,Mobile
+L100089,2025-09-25,Emailing,Desktop
+L100090,2025-09-13,LinkedIn Ads,Tablet
+L100091,2025-09-24,LinkedIn Ads,Mobile
+L100092,2025-09-25,Facebook Ads,Desktop
+L100093,2025-09-12,Instagram Ads,Tablet
+L100094,2025-09-27,Instagram Ads,Mobile
+L100095,2025-09-09,CRM,Mobile
+L100096,2025-09-07,Instagram Ads,Mobile
+L100097,2025-09-20,Facebook Ads,Mobile
+L100098,2025-09-19,Facebook Ads,Desktop
+L100099,2025-09-05,Facebook Ads,Mobile
+L100100,2025-09-25,LinkedIn Ads,Mobile
+L100101,2025-09-06,CRM,Mobile
+L100102,2025-09-24,Facebook Ads,Mobile
+L100103,2025-09-01,Facebook Ads,Desktop
+L100104,2025-09-24,Facebook Ads,Mobile
+L100105,2025-09-23,LinkedIn Ads,Mobile
+L100106,2025-09-23,LinkedIn Ads,Mobile
+L100107,2025-09-20,Emailing,Mobile
+L100108,2025-09-14,Emailing,Mobile
+L100109,2025-09-21,Instagram Ads,Mobile
+L100110,2025-09-09,Emailing,Mobile
+L100111,2025-09-23,LinkedIn Ads,Mobile
+L100112,2025-09-17,Facebook Ads,Desktop
+L100113,2025-09-14,Emailing,Desktop
+L100114,2025-09-15,CRM,Desktop
+L100115,2025-09-17,Emailing,Desktop
+L100116,2025-09-02,Facebook Ads,Desktop
+L100117,2025-09-05,Emailing,Mobile
+L100118,2025-09-08,Emailing,Mobile
+L100119,2025-09-04,Emailing,Mobile
+L100120,2025-09-13,Emailing,Mobile
+L100121,2025-09-20,Emailing,Desktop
+L100122,2025-09-19,Emailing,Mobile
+L100123,2025-09-14,Instagram Ads,Desktop
+L100124,2025-09-25,LinkedIn Ads,Desktop
+L100125,2025-09-17,Facebook Ads,Mobile
+L100126,2025-09-03,Facebook Ads,Desktop
+L100127,2025-09-23,Instagram Ads,Mobile
+L100128,2025-09-17,CRM,Desktop
+L100129,2025-09-19,CRM,Mobile
+L100130,2025-09-17,Emailing,Mobile
+L100131,2025-09-17,Emailing,Mobile
+L100132,2025-09-03,Facebook Ads,Mobile
+L100133,2025-09-17,Facebook Ads,Mobile
+L100134,2025-09-24,Instagram Ads,Desktop
+L100135,2025-09-09,Facebook Ads,Desktop
+L100136,2025-09-18,Emailing,Mobile
+L100137,2025-09-01,Facebook Ads,Mobile
+L100138,2025-09-11,Instagram Ads,Mobile
+L100139,2025-09-13,Emailing,Mobile
+L100140,2025-09-29,LinkedIn Ads,Tablet
+L100141,2025-09-07,Emailing,Mobile
+L100142,2025-09-09,CRM,Mobile
+L100143,2025-09-12,Emailing,Mobile
+L100144,2025-09-29,LinkedIn Ads,Mobile
+L100145,2025-09-25,CRM,Mobile
+L100146,2025-09-02,CRM,Desktop
+L100147,2025-09-07,LinkedIn Ads,Desktop
+L100148,2025-09-24,LinkedIn Ads,Tablet
+L100149,2025-09-02,Instagram Ads,Desktop
+L100150,2025-09-25,LinkedIn Ads,Mobile
+L100151,2025-09-09,Emailing,Desktop
+L100152,2025-09-27,Instagram Ads,Desktop
+L100153,2025-09-09,Instagram Ads,Desktop
+L100154,2025-09-13,CRM,Tablet
+L100155,2025-09-20,Facebook Ads,Desktop
+L100156,2025-09-04,Facebook Ads,Desktop
+L100157,2025-09-17,Instagram Ads,Mobile
+L100158,2025-09-15,Facebook Ads,Desktop
+L100159,2025-09-23,Emailing,Mobile
+L100160,2025-09-29,Instagram Ads,Mobile
+L100161,2025-09-20,Facebook Ads,Desktop
+L100162,2025-09-12,Facebook Ads,Tablet
+L100163,2025-09-12,Facebook Ads,Tablet
+L100164,2025-09-13,Facebook Ads,Mobile
+L100165,2025-09-24,Facebook Ads,Desktop
+L100166,2025-09-10,Facebook Ads,Desktop
+L100167,2025-09-05,LinkedIn Ads,Mobile
+L100168,2025-09-10,Facebook Ads,Mobile
+L100169,2025-09-01,CRM,Mobile
+L100170,2025-09-04,CRM,Desktop
+L100171,2025-09-03,Instagram Ads,Mobile
+L100172,2025-09-23,Facebook Ads,Tablet
+L100173,2025-09-21,Instagram Ads,Mobile
+L100174,2025-09-21,LinkedIn Ads,Tablet
+L100175,2025-09-14,LinkedIn Ads,Mobile
+L100176,2025-09-21,LinkedIn Ads,Desktop
+L100177,2025-09-05,Instagram Ads,Mobile
+L100178,2025-09-27,Instagram Ads,Mobile
+L100179,2025-09-15,Facebook Ads,Desktop
+L100180,2025-09-28,LinkedIn Ads,Tablet
+L100181,2025-09-05,Emailing,Desktop
+L100182,2025-09-15,LinkedIn Ads,Mobile
+L100183,2025-09-21,CRM,Mobile
+L100184,2025-09-15,Emailing,Mobile
+L100185,2025-09-13,Instagram Ads,Mobile
+L100186,2025-09-05,Emailing,Desktop
+L100187,2025-09-12,LinkedIn Ads,Desktop
+L100188,2025-09-07,Emailing,Desktop
+L100189,2025-09-09,CRM,Desktop
+L100190,2025-09-20,Emailing,Desktop
+L100191,2025-09-19,CRM,Desktop
+L100192,2025-09-18,LinkedIn Ads,Mobile
+L100193,2025-09-11,Instagram Ads,Mobile
+L100194,2025-09-28,LinkedIn Ads,Desktop
+L100195,2025-09-03,LinkedIn Ads,Desktop
+L100196,2025-09-10,CRM,Mobile
+L100197,2025-09-04,Facebook Ads,Mobile
+L100198,2025-09-10,Instagram Ads,Desktop
+L100199,2025-09-28,Emailing,Mobile
+L100200,2025-09-11,Instagram Ads,Mobile
+L100201,2025-09-27,Emailing,Desktop
+L100202,2025-09-15,Instagram Ads,Desktop
+L100203,2025-09-21,Instagram Ads,Mobile
+L100204,2025-09-14,Facebook Ads,Desktop
+L100205,2025-09-08,Instagram Ads,Mobile
+L100206,2025-09-23,LinkedIn Ads,Desktop
+L100207,2025-09-29,LinkedIn Ads,Mobile
+L100208,2025-09-08,Instagram Ads,Mobile
+L100209,2025-09-23,Instagram Ads,Mobile
+L100210,2025-09-08,CRM,Mobile
+L100211,2025-09-21,Emailing,Desktop
+L100212,2025-09-23,Emailing,Mobile
+L100213,2025-09-14,Emailing,Mobile
+L100214,2025-09-22,LinkedIn Ads,Mobile
+L100215,2025-09-08,Facebook Ads,Desktop
+L100216,2025-09-03,LinkedIn Ads,Desktop
+L100217,2025-09-03,LinkedIn Ads,Tablet
+L100218,2025-09-13,Facebook Ads,Mobile
+L100219,2025-09-27,CRM,Mobile
+L100220,2025-09-04,LinkedIn Ads,Mobile
+L100221,2025-09-14,Facebook Ads,Mobile
+L100222,2025-09-21,Facebook Ads,Tablet
+L100223,2025-09-06,Facebook Ads,Desktop
+L100224,2025-09-21,Emailing,Mobile
+L100225,2025-09-09,Emailing,Mobile
+L100226,2025-09-24,CRM,Desktop
+L100227,2025-09-17,Facebook Ads,Mobile
+L100228,2025-09-16,Facebook Ads,Mobile
+L100229,2025-09-06,LinkedIn Ads,Mobile
+L100230,2025-09-14,Instagram Ads,Mobile
+L100231,2025-09-25,CRM,Mobile
+L100232,2025-09-01,LinkedIn Ads,Mobile
+L100233,2025-09-22,Instagram Ads,Mobile
+L100234,2025-09-15,Facebook Ads,Desktop
+L100235,2025-09-21,CRM,Mobile
+L100236,2025-09-20,LinkedIn Ads,Mobile
+L100237,2025-09-13,CRM,Tablet
+L100238,2025-09-09,Emailing,Desktop
+L100239,2025-09-19,CRM,Mobile
+L100240,2025-09-05,Instagram Ads,Mobile
+L100241,2025-09-17,Emailing,Desktop
+L100242,2025-09-03,Instagram Ads,Mobile
+L100243,2025-09-19,LinkedIn Ads,Mobile
+L100244,2025-09-19,Emailing,Desktop
+L100245,2025-09-03,Facebook Ads,Mobile
+L100246,2025-09-22,LinkedIn Ads,Desktop
+L100247,2025-09-13,Facebook Ads,Mobile
+L100248,2025-09-23,Facebook Ads,Desktop
+L100249,2025-09-02,Facebook Ads,Mobile
+L100250,2025-09-06,Facebook Ads,Mobile
+L100251,2025-09-15,CRM,Mobile
+L100252,2025-09-06,LinkedIn Ads,Mobile
+L100253,2025-09-10,Emailing,Desktop
+L100254,2025-09-20,CRM,Mobile
+L100255,2025-09-05,CRM,Mobile
+L100256,2025-09-20,Facebook Ads,Desktop
+L100257,2025-09-03,LinkedIn Ads,Desktop
+L100258,2025-09-06,Emailing,Mobile
+L100259,2025-09-18,CRM,Mobile
+L100260,2025-09-24,LinkedIn Ads,Tablet
+L100261,2025-09-05,LinkedIn Ads,Desktop
+L100262,2025-09-09,Emailing,Desktop
+L100263,2025-09-27,CRM,Desktop
+L100264,2025-09-29,Emailing,Desktop
+L100265,2025-09-17,Facebook Ads,Mobile
+L100266,2025-09-13,Emailing,Mobile
+L100267,2025-09-11,LinkedIn Ads,Mobile
+L100268,2025-09-18,Emailing,Desktop
+L100269,2025-09-18,CRM,Tablet
+L100270,2025-09-09,LinkedIn Ads,Mobile
+L100271,2025-09-01,Emailing,Mobile
+L100272,2025-09-05,Emailing,Mobile
+L100273,2025-09-28,Emailing,Tablet
+L100274,2025-09-13,Instagram Ads,Mobile
+L100275,2025-09-14,LinkedIn Ads,Mobile
+L100276,2025-09-14,Facebook Ads,Mobile
+L100277,2025-09-23,LinkedIn Ads,Mobile
+L100278,2025-09-02,Emailing,Mobile
+L100279,2025-09-03,LinkedIn Ads,Mobile
+L100280,2025-09-08,CRM,Mobile
+L100281,2025-09-15,LinkedIn Ads,Mobile
+L100282,2025-09-20,LinkedIn Ads,Mobile
+L100283,2025-09-15,LinkedIn Ads,Mobile
+L100284,2025-09-13,Emailing,Mobile
+L100285,2025-09-28,Emailing,Desktop
+L100286,2025-09-05,Emailing,Mobile
+L100287,2025-09-17,Instagram Ads,Mobile
+L100288,2025-09-16,LinkedIn Ads,Mobile
+L100289,2025-09-14,Instagram Ads,Mobile
+L100290,2025-09-24,CRM,Mobile
+L100291,2025-09-08,Emailing,Mobile
+L100292,2025-09-28,LinkedIn Ads,Desktop
+L100293,2025-09-10,Emailing,Mobile
+L100294,2025-09-16,Facebook Ads,Mobile
+L100295,2025-09-16,LinkedIn Ads,Mobile
+L100296,2025-09-25,CRM,Mobile
+L100297,2025-09-13,Instagram Ads,Mobile
+L100298,2025-09-09,Emailing,Desktop
+L100299,2025-09-01,Instagram Ads,Desktop
